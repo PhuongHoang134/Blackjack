@@ -1,0 +1,51 @@
+Card: This class represents a single playing card. It has properties such as suit and face, which determine the card's suit (e.g., hearts, diamonds) and face value (e.g., Ace, King, 2, 3), respectively. The Card class also provides methods to retrieve the suit, face, and numerical value of the card.
+
+Deck: This class represents a deck of playing cards. It contains a collection of Card objects and provides functionality to create, shuffle, and deal cards from the deck. The Deck class has methods like shuffle() to randomly order the cards and dealCard() to retrieve the next card from the deck. It also includes a method showAllCards() to display the entire deck of cards.
+
+Hand: This class represents a hand of cards held by a player in a card game. It contains a collection of Card objects that the player has been dealt. The Hand class provides methods to add cards to the hand, calculate the total value of the hand (e.g., for blackjack), retrieve a card from a specific position in the hand, and generate a string representation of the cards in the hand.
+
+
+Card class:
+-----------
+
+It represents a playing card with a suit and face value.
+It has instance variables suit and face, which store the suit and face value of the card, respectively.
+It has a constructor that initializes the suit and face of the card.
+It has getter methods getSuit() and getFace() to access the suit and face values of the card.
+It has a getValue() method that returns the numeric value of the card for scoring purposes in Blackjack.
+It overrides the toString() method to provide a string representation of the card.
+
+Deck class:
+-----------
+
+It represents a deck of playing cards.
+It has instance variables cards (a list of Card objects) and nextCard (to keep track of the next card to be dealt).
+It has a constructor that initializes the deck with 52 cards (one of each suit and face value).
+It has a shuffle() method that shuffles the deck using the Fisher-Yates algorithm.
+It has a showAllCards() method that displays all the cards in the deck.
+It has a dealCard() method that deals the next card from the deck.
+
+Hand class:
+-----------
+
+It represents a hand of playing cards.
+It has an instance variable cards (a list of Card objects) to store the cards in the hand.
+It has a constructor that initializes an empty hand.
+It has an addCard() method that adds a card to the hand.
+It has a getBlackjackValue() method that calculates the value of the hand for scoring purposes in Blackjack.
+It has a getCard() method that retrieves a card from the hand based on its index.
+It overrides the toString() method to provide a string representation of the hand.
+
+Blackjack class:
+----------------
+
+It represents the main game logic of the Blackjack game.
+It creates an instance of the Deck class to create and shuffle the deck of cards.
+It prompts the player to enter their name and place a bet.
+It creates instances of Hand for the player and the dealer.
+It deals two cards to each player, alternating between the player and the dealer.
+It displays the initial hands and scores of the player and the dealer.
+It allows the player to choose to hit or stand, repeatedly adding cards to the player's hand until they stand or bust (exceeding 21).
+It reveals the dealer's hidden card and allows the dealer to draw cards until their score is 17 or higher.
+It compares the scores of the player and the dealer and determines the winner or a tie.
+It prints the outcome of the game and the amount of winnings or losses for the player.
